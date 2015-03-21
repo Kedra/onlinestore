@@ -1,0 +1,50 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 51px;
+  padding-bottom: 30px;
+}
+
+#ads .thumbnail img{
+	margin-left: 12px;
+}
+
+.jumbotron{
+	background-color:#D7D5DB;
+	color: #000;
+}
+
+
+#qty{
+	color:#000;
+}
+
+#search{
+	color:#000;
+}
+
+.panel-default >.panel-heading{
+	background-color: #D7D5DB;
+	border-color: #8f5b5b;
+}
+
+.panel-title{
+	color:#1b1b1b;
+}
+
+.panel-default{
+	background-color: #1b1b1b;
+	border-color: #8f5b5b;
+}
+
+.form-control{
+	background-color:#D7D5DB;
+	color: #1b1b1b;
+	border-color: #8f5b5b;
+}
+.panel-body{
+	background-color: #D7D5D8;
+}
+
+.chicklets.email{
+	color: #fff;
+}

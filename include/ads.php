@@ -1,0 +1,1 @@
+<script src="<?php echo JS_PATH; ?>ads.js"></script>
