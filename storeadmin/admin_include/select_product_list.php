@@ -1,5 +1,29 @@
 <?php // This block grabs the whole list for viewing 
-
+$alert = '';
+if(isset($_SESSION['file_exists'])){
+	$alert = '<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Same file exists.</div>
+			  <br>
+			   '.$_SESSION['file_exists'].'';
+	unset($_SESSION['file_exists']);
+}
+if(isset($_SESSION['file_lrg'])){
+	$alert = '<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;File too large.</div>';
+	unset($_SESSION['file_lrg']);
+}
+if(isset($_SESSION['bad_ext'])){
+	$alert = '<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Upload only .jpg files.</div>
+			  <br>
+			   '.$_SESSION['bad_ext'].'';
+	unset($_SESSION['bad_ext']);
+}
+if(isset($_SESSION['file_fail'])){
+	$alert = '<div class="alert alert-warning" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Upload unsuccessfully.</div>';
+	unset($_SESSION['file_fail']);
+}
+if(isset($_SESSION['upd_success'])){
+	$alert = '<div class="alert alert-success" role="alert"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;&nbsp;&nbsp;Uploaded and added successfully.</div>';
+	unset($_SESSION['upd_success']);
+}
 $product_list = '<div class="row">
 							<div class="col-md-4"></div>
 							<div class="col-md-4">

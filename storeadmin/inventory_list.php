@@ -13,7 +13,7 @@ require_once('/admin_include/select_product_list.php'); ?>
 <?php require_once('admin_include/admin_nav_log.php'); ?>
 	<div align="right" style="margin-right:32px"><a href="inventory_list.php#inventoryForm">Add New Inventory Item</a><br/>
 	</div>
-	<div align="center"><h2>Inventory list</h2></div>
+	<div align="center"><?php echo $alert;?><h2>Inventory list</h2></div>
 	<?php echo $product_list; ?>
 	<a name="inventoryForm" id="inventoryForm"></a>
 	<h3>&darr;Add New Inventory Item Form&darr;</h3>

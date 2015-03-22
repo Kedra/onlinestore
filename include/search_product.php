@@ -5,14 +5,14 @@
 	$title = $_POST["title"];
 
 	$dynamicList = ''; 
-	echo '<table id="tbl" class="table" border="0" cellspacing="0">
-					<tr>
-						<th>Product Image</th>
-						<th>Product Details</th>
-					</tr>';
 	$sql = mysql_query("SELECT * FROM products WHERE product_name like '%".$title."%'");
 	$productCount = mysql_num_rows($sql);
 	if($productCount > 0){
+	echo '<table id="tbl" class="table" border="0" cellspacing="0">
+				<tr>
+					<th>Product Image</th>
+					<th>Product Details</th>
+				</tr>';
 		while($row = mysql_fetch_array($sql)){
 			$id = $row['pid'];
 			$product_name = $row['product_name'];

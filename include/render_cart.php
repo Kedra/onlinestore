@@ -62,9 +62,11 @@
 			}
 			// Dynamic Checkout 
 			$x = $i + 1; 
+			$conv_price = $price /  44.8646;
+			$conv_price = number_format($conv_price, 2, '.', ''); // convert to USD
 			$pp_checkout_btn .= '
 								<input type="hidden" name="item_name_'.$x.'" value="'.$product_name.'">
-								<input type="hidden" name="amount_'.$x.'" value="'.$price.'">
+								<input type="hidden" name="amount_'.$x.'" value="'.$conv_price.'">
 								<input type="hidden" name="quantity_'.$x.'" value="'.$each_item['quantity'].'">
 								';
 			// Create the product array variable

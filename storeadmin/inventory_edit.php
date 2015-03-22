@@ -11,8 +11,7 @@ require_once('../include/header.php');?>
 <?php require_once('admin_include/admin_nav_log.php'); ?>
 	<div align="right" style="margin-right:32px"><a href="inventory_list.php#inventoryForm">Add New Inventory Item</a><br/>
 	</div>
-	<div>Product ID: <?php echo $targetID ;?></div>
-	<?php echo $product_name; ?>
+	<?php echo $product_list; ?>
 	<a name="inventoryForm" id="inventoryForm"></a>
 	<h3>&darr;Edit Inventory Item Form&darr;</h3>
 	<form action="inventory_edit.php"enctype="multipart/form-data" name="myForm" id="myForm" method="post">
