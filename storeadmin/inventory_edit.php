@@ -45,6 +45,7 @@ require_once('../include/header.php');?>
 		<option value="Dell">Dell</option>
 		<option value="HP">HP</option>
 		<option value="Acer">Acer</option>
+		<option value="Apple">Apple</option>
 		</select>
 		</label></td>
 	</tr>

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2015 at 04:04 AM
+-- Generation Time: Mar 22, 2015 at 05:47 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -30,19 +30,22 @@ CREATE TABLE IF NOT EXISTS `products` (
 `pid` int(11) NOT NULL,
   `product_name` varchar(255) NOT NULL,
   `price` varchar(16) NOT NULL,
+  `qty` int(4) NOT NULL,
   `details` text NOT NULL,
   `category` varchar(16) NOT NULL,
   `subcategory` varchar(16) NOT NULL,
   `date_added` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`pid`, `product_name`, `price`, `details`, `category`, `subcategory`, `date_added`) VALUES
-(10, 'HP Elitebook', '1000', 'Heavy and Sturdy', 'HP', 'HP', '2015-02-02'),
-(11, 'Dell Latitude E54101', '4500', 'Business laptop by Dell that centers for users with long-lasting battery life and performance', 'Dell', 'Laptop', '2015-02-11');
+INSERT INTO `products` (`pid`, `product_name`, `price`, `qty`, `details`, `category`, `subcategory`, `date_added`) VALUES
+(11, 'Dell Latitude E54101', '4500', 99, 'Business laptop by Dell that centers for users with long-lasting battery life and performance', 'Dell', 'Laptop', '2015-02-11'),
+(15, 'HP EliteBook 2530p', '25000', 99, 'Hard and Sturdy', 'HP', 'Laptop', '2015-03-22'),
+(16, 'ThinkPad x230', '70000', 99, 'Aims to be portable and with great battery life.', 'Lenovo', 'Netbook', '2015-03-22'),
+(17, 'Dell Precision M4600', '100000', 99, 'Big workstation for office-based usage and power usage.', 'Dell', 'Laptop', '2015-03-22');
 
 -- --------------------------------------------------------
 
@@ -92,16 +95,15 @@ CREATE TABLE IF NOT EXISTS `users` (
   `last_log_date` date NOT NULL,
   `fname` varchar(50) NOT NULL,
   `lname` varchar(50) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `last_log_date`, `fname`, `lname`) VALUES
-(1, 'Kedra', '$2y$10$6556f63QVkxYfmVR.I4vSeYVEqxJLImeRnOsncfVz5JVPBoOvfQUy', 'kedra@openmailbox.org', '2010-12-08', 'Daryl', 'Casanova'),
-(2, 'adam', '$2y$10$AXOm.zUe.1BRyfMIqjunQ.RZZudaM6x20TARk8WtZVTtDoieiYcAq', 'kedra@openmailbox.org', '0000-00-00', 'Adam', 'Cole'),
-(3, 'john', '$2y$10$rA6zvW043RNQxK255PnRwOnSxmp/7GrbnM6j2HF65dl9jWWL23T52', 'casanova_daryl@yahoo.com', '0000-00-00', 'Daryl', 'Casanova');
+(1, 'Kedra', '$2y$10$1ZKp4vPfpLRJ0zTDJX7n7eAz90rY2Qwr/MtncioPiFNa5PgCEw2Y6', 'kedra@openmailbox.org', '2010-12-08', 'Daryl', 'Casanova'),
+(2, 'adam', '$2y$10$OHe7UvcxQIFls1uyasEkt.vArW9YAWO2sB5JCMeBtfVrlajH2SjDa', 'kedra@openmailbox.org', '0000-00-00', 'Adam', 'Cole');
 
 --
 -- Indexes for dumped tables
@@ -133,7 +135,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `transactions`
 --
@@ -143,7 +145,7 @@ MODIFY `tid` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
