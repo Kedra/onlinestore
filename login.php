@@ -3,6 +3,7 @@
 	require_once('include/header.php'); 
 	require_once('include/check_login.php'); 
 	require_once('include/ads.php');
+	// changes
 ?>
 <title>User Login</title>
 </head>
